@@ -15,20 +15,20 @@ import {
 import { Input } from "@/components/ui/input";
 
 const FormSchema = z.object({
-  email: z.string().email({
-    message: "Please provide a valid email address.",
-  }),
-  password: z.string().min(6, {
-    message: "Password must be at least 6 characters.",
+  username: z.string().min(3, {
+    message: "Please provide a valid username.",
   }),
 });
 
-export default function LoginForm({ submit }: { submit: (data: z.infer<typeof FormSchema>) => void }) {
+export default function LoginForm({
+  submit,
+}: {
+  submit: (data: z.infer<typeof FormSchema>) => void;
+}) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      email: "",
-      password: "",
+      username: "",
     },
   });
 
@@ -40,33 +40,30 @@ export default function LoginForm({ submit }: { submit: (data: z.infer<typeof Fo
       >
         <FormField
           control={form.control}
-          name="email"
+          name="username"
           render={({ field }) => (
             <FormItem className="grow">
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input autoComplete="email" placeholder="admin@zealthy.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input autoComplete="current-password" type="password" placeholder="••••••••" {...field} />
+                <Input
+                  autoComplete="username"
+                  placeholder="First_Last"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         <div className="w-full flex justify-end">
-          <Button type="submit" className="min-w-[120px]">
-            {form.formState.isSubmitting ? <div className="relative"><div className="spinner" /></div> : "Login"}
+          <Button type="submit" className="w-full">
+            {form.formState.isSubmitting ? (
+              <div className="relative">
+                <div className="spinner" />
+              </div>
+            ) : (
+              "Login"
+            )}
           </Button>
         </div>
       </form>

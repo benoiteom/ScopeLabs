@@ -1,4 +1,8 @@
 
+## Overview
+
+Welcome to Learnwell, a simple and straightforward website where a user can browse videos uploaded by others, upload their own videos, and comment on videos. They also have the ability to set their username by loggin in. The primary goal here was functionality and code cleanliness, given more time I would like to improve on the overall design on the site.
+
 ## Clone and run locally
 
 1. First close this repo
@@ -6,19 +10,16 @@
 2. Use `cd` to change into the app's directory
 
    ```bash
-   cd fs-template
+   cd ScopeLabs
    ```
 
-3. Set environment variables for Supabase in `.env.local`
+3. Install dependencies
 
+   ```bash
+   npm i
    ```
-   NEXT_PUBLIC_SUPABASE_URL=[INSERT SUPABASE PROJECT URL]
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT SUPABASE PROJECT API ANON KEY]
-   ```
 
-   Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` can be found in [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
-
-5. You can now run the Next.js local development server:
+4. You can now run the Next.js local development server:
 
    ```bash
    npm run dev
@@ -26,6 +27,12 @@
 
    The website should now be running on [localhost:3000](http://localhost:3000/).
 
-> Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
+## Screenshots
 
-Happy coding!
+![Screenshot of main page](https://github.com/benoiteom/Scopelabs/blob/main/ss1.png?raw=true)
+
+![Screenshot of video page](https://github.com/benoiteom/Scopelabs/blob/main/ss2.png?raw=true)
+
+![Screenshot of upload page](https://github.com/benoiteom/Scopelabs/blob/main/ss3.png?raw=true)
+
+![Screenshot of login page](https://github.com/benoiteom/Scopelabs/blob/main/ss4.png?raw=true)

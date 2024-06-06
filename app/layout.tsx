@@ -8,8 +8,8 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Zealthy Support",
-  description: "Zealthy support ticket system, submit a request here",
+  title: "Learnwell",
+  description: "Learnwell is a comprehensive online learning platform.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
