@@ -1,7 +1,7 @@
 
 ## Overview
 
-Welcome to Learnwell, a simple and straightforward website where a user can browse videos uploaded by others, upload their own videos, and comment on videos. They also have the ability to set their username by loggin in. The primary goal here was functionality and code cleanliness, given more time I would like to improve on the overall design on the site.
+Welcome to Learnwell, a simple and straightforward website where a user can browse videos uploaded by others, upload their own videos, and comment on videos. They also have the ability to set their username by logging in. The primary goal here was functionality and code cleanliness, given more time I would like to improve on the overall design on the site.
 
 ## Clone and run locally
 
